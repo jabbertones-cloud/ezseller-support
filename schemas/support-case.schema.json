@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Public Support Case",
+  "type": "object",
+  "required": ["product","problem_id","problem","expected_state","observed_state","diagnostics_run","privacy_check"],
+  "properties": {
+    "product":{"type":"string"}, "problem_id":{"type":"string"}, "platform":{"type":"string"}, "marketplace":{"type":"string"}, "locale":{"type":"string"},
+    "problem":{"type":"string"}, "expected_state":{"type":"string"}, "observed_state":{"type":"string"},
+    "diagnostics_run":{"type":"array","items":{"type":"string"}}, "evidence":{"type":"array","items":{"type":"string"}},
+    "knowledge_articles_checked":{"type":"array","items":{"type":"string"}}, "official_sources_checked":{"type":"array","items":{"type":"string"}},
+    "suggested_root_cause":{"type":"string"}, "confidence":{"type":"string","enum":["low","medium","high"]},
+    "actions_attempted":{"type":"array","items":{"type":"string"}}, "verification_result":{"type":"string"}, "privacy_check":{"type":"boolean"}
+  }, "additionalProperties": true
+}
