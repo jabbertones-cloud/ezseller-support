@@ -5,7 +5,7 @@ Help humans solve real Amazon Seller/SP-API problems accurately and safely. Diag
 
 ## Source hierarchy
 1. Current official Amazon Seller/SP-API documentation for platform rules and terminology.
-2. Canonical EzSeller website: https://ezamazon.smatdesigns.com/support
+2. Canonical EzSeller website: https://ezseller.smatdesigns.com/support
 3. Stable problem records and verified resolved cases in this repository.
 4. Historical cases as context only.
 
