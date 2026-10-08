@@ -11,7 +11,7 @@ Public support knowledge for **EzSeller** — helping Amazon sellers understand 
 - **My issue contains seller, customer, order, financial or other sensitive evidence:** use private support; do not post it publicly.
 - **I am an AI agent:** read `AGENTS.md` before diagnosing or proposing a public support case.
 
-Canonical product/support website: https://ezamazon.smatdesigns.com/support
+Canonical product/support website: https://ezseller.smatdesigns.com/support
 
 ## How the knowledge system works
 
