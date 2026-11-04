@@ -1,31 +1,44 @@
-# EzSeller Support & Knowledge
+# EzSeller support
 
-Public support knowledge for **EzSeller** — helping Amazon sellers understand listings, inventory, marketplaces, reports, reconciliation and related seller problems without guessing through Seller Central.
+Get help with seller-account connections, listings, inventory and reports.
 
-> This repository contains public documentation, sanitized problem knowledge, and support workflows. It does **not** contain EzSeller source code, credentials, customer/order data, or private seller evidence.
+**[Search issues](https://github.com/jabbertones-cloud/ezseller-support/issues)** · **[Report a bug](https://github.com/jabbertones-cloud/ezseller-support/issues/new/choose)** · **[Read agent instructions](AGENT-GITHUB-ISSUES.md)**
 
-## Start here
+## Find an answer first
 
-- **I have a general/reproducible seller question:** search this repository's problem knowledge and resolved cases.
-- **My answer depends on current Amazon seller/marketplace state:** use EzSeller's authenticated diagnostic experience.
-- **My issue contains seller, customer, order, financial or other sensitive evidence:** use private support; do not post it publicly.
-- **I am an AI agent:** read `AGENTS.md` before diagnosing or proposing a public support case.
+Search the [open and closed issues](https://github.com/jabbertones-cloud/ezseller-support/issues?q=is%3Aissue) for your symptom or MCP tool name. You may find a workaround without opening a new report.
 
-Canonical product website: https://ezseller.smatdesigns.com/  
-Product support: https://ezseller.smatdesigns.com/support  
-Operator: https://smatdesigns.com/  
-Security and privacy: https://ezseller.smatdesigns.com/security and https://ezseller.smatdesigns.com/privacy
+- [Troubleshooting](docs/troubleshooting.md)
+- [Known issues](docs/known-issues.md)
+- [Problem reference](knowledge/problem-ontology.md)
 
-## How the knowledge system works
+## Report a problem
 
-Customer wording → stable `AMZ.*` problem ID → Amazon terminology → public explanation → authenticated diagnostic → safe action → verification → support case when needed → sanitized resolution.
+1. Select **Report a bug** and choose the matching issue form.
+2. Tell us which EzSeller tool or report failed, the marketplace if relevant, expected versus observed behavior and safe steps to reproduce. Never paste seller IDs, order data or financial records.
+3. Remove passwords, access tokens, customer information, private source code, screenshots with personal data and raw logs before posting.
+4. Submit and keep the issue URL so you or your agent can check replies.
 
-The website is the canonical public explanation and discovery surface. This repository is the public agent/community/evidence layer.
+**Do not publish private or security information.** Use [private product support](https://ezseller.smatdesigns.com/support) when the details cannot be shared publicly. Read [Security](SECURITY.md) before reporting a vulnerability.
 
-## Public safety
+## Use an AI agent to get help
 
-Never post credentials, authorization tokens, seller/customer identifiers, order data, private financial evidence, private source code, raw private logs, or other sensitive account evidence in a public issue.
+An agent with a separately authorized GitHub connection can search issues, read the full discussion, prepare a safe report and, when requested, create an issue or post a reply. The maintained [GitHub MCP Server](https://github.com/github/github-mcp-server) exposes these issue operations. The product MCP does **not** automatically give the agent GitHub permissions.
 
-## Status
+Ask your agent: **"Check existing EzSeller support issues for this error and tell me whether there is a fix or workaround."**
 
-This repository is being populated from a verified problem ontology. Content is intentionally conservative: a historical case is not proof of current Amazon behavior, and a test is not proof of current live seller state.
+To file a report, ask: **"Prepare a public bug report with safe details. Search for duplicates, then file it using my GitHub connection."**
+
+If GitHub is not connected, your agent can prepare a report and give you the [new issue form](https://github.com/jabbertones-cloud/ezseller-support/issues/new/choose). It must not claim a ticket was created.
+
+Read [Agent workflow](AGENTS.md) and [GitHub issue operations](AGENT-GITHUB-ISSUES.md).
+
+## What happens next
+
+You can track an issue and respond in its GitHub thread. A maintainer may ask for a minimal reproduction, share a workaround or request a new test. There is no guaranteed response time. A report is not fixed until the affected behavior has been independently checked.
+
+EzSeller support issues are about the EzSeller product, not Amazon Seller Support cases. Public reports cannot verify private Amazon account state. Use authenticated diagnostics for account-specific evidence.
+
+## Contribute
+
+Corrections and reusable troubleshooting notes are welcome. See [Contributing](CONTRIBUTING.md) and [Support policy](SUPPORT.md).
