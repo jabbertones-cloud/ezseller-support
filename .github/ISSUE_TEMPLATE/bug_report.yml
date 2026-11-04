@@ -1,0 +1,46 @@
+name: Bug report
+description: Report a reproducible EzSeller bug without private data
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        First search existing issues. Do not include Amazon seller or customer data, order IDs, financial records, credentials, private source or raw logs.
+  - type: input
+    id: problem_id
+    attributes:
+      label: Problem reference (optional)
+      description: Stable AMZ.* problem ID if you already have one
+      placeholder: Unknown
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened?
+      description: Include the affected product tool or feature and any sanitized error text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: A minimal, repeatable example containing no private records
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: MCP client and product version (if known)
+      placeholder: ChatGPT / Claude / Cursor; version if available
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public-safety confirmation
+      options:
+        - label: I removed passwords, tokens, private customer data, private app or seller details, and other sensitive material
+          required: true
