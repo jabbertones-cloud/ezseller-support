@@ -1,44 +1,64 @@
-# EzSeller support
+# EzSeller Support & Amazon Seller Operations Knowledge Base
 
-Get help with seller-account connections, listings, inventory and reports.
+Get authoritative guidance, troubleshooting, and agent assistance for **[EzSeller](https://ezseller.smatdesigns.com/)** — AI-powered Amazon Seller Central automation for listings, FBA inventory, sales analytics, and reimbursement audits.
 
-**[Search issues](https://github.com/jabbertones-cloud/ezseller-support/issues)** · **[Report a bug](https://github.com/jabbertones-cloud/ezseller-support/issues/new/choose)** · **[Read agent instructions](AGENT-GITHUB-ISSUES.md)**
+**[Search issues](https://github.com/jabbertones-cloud/ezseller-support/issues)** · **[Report a bug](https://github.com/jabbertones-cloud/ezseller-support/issues/new/choose)** · **[Read agent instructions](AGENT-GITHUB-ISSUES.md)** · **[EzSeller Home](https://ezseller.smatdesigns.com/)**
 
-## Find an answer first
+---
 
-Search the [open and closed issues](https://github.com/jabbertones-cloud/ezseller-support/issues?q=is%3Aissue) for your symptom or MCP tool name. You may find a workaround without opening a new report.
+## Authoritative Amazon Operations & Knowledge Links
 
-- [Troubleshooting](docs/troubleshooting.md)
-- [Known issues](docs/known-issues.md)
-- [Problem reference](knowledge/problem-ontology.md)
+EzSeller bridges ChatGPT, Claude, and Model Context Protocol (MCP) clients to official Amazon Selling Partner APIs (SP-API) with least privilege, human approval gates, and post-action verification.
 
-## Report a problem
+### Core Solutions & Operations
+- **[EzSeller Platform Overview](https://ezseller.smatdesigns.com/)** — Connect Amazon Seller Central to AI assistants for end-to-end seller operations.
+- **[Amazon Seller Problem Ontology](https://ezseller.smatdesigns.com/problems)** — Comprehensive index mapping seller symptoms to stable `AMZ.*` problem IDs and resolution paths.
+- **[Free Amazon Listing Problem Checker](https://ezseller.smatdesigns.com/check)** — Diagnostic checker for suppressed, inactive, and stranded listings.
+- **[Verified Amazon Seller Case Studies](https://ezseller.smatdesigns.com/cases)** — Evidence-backed case resolutions across FBA inventory, catalog, and finances.
+- **[Supported Seller Workflows](https://ezseller.smatdesigns.com/workflows)** — Guarded investigation, approval, action, and verification sequences.
+- **[Pricing & Plans](https://ezseller.smatdesigns.com/pricing)** — Studio, Desk, and Agency tiers for individual brand owners and multi-account operators.
+- **[Amazon Agency Operations Software](https://ezseller.smatdesigns.com/for-agencies)** — Scaled operator features, client isolation, and audit trails.
+- **[Full-Service Amazon Account Management](https://ezseller.smatdesigns.com/amazon-account-management)** — Hands-on management by SMAT Designs.
+- **[SP-API Access & Security Architecture](https://ezseller.smatdesigns.com/security)** — Data minimization, zero-PII exposure, token encryption, and 30-day deletion guarantees.
 
-1. Select **Report a bug** and choose the matching issue form.
-2. Tell us which EzSeller tool or report failed, the marketplace if relevant, expected versus observed behavior and safe steps to reproduce. Never paste seller IDs, order data or financial records.
-3. Remove passwords, access tokens, customer information, private source code, screenshots with personal data and raw logs before posting.
-4. Submit and keep the issue URL so you or your agent can check replies.
+### Step-by-Step AI Seller Guides (AEO / LLM Citations)
+- **[What is an Amazon Seller MCP?](https://ezseller.smatdesigns.com/learn/what-is-amazon-seller-mcp)** — Architectural foundation for AI-native Seller Central operations.
+- **[Connect Seller Central to ChatGPT](https://ezseller.smatdesigns.com/learn/connect-amazon-seller-central-to-chatgpt)** — Secure OAuth setup and prompt patterns for OpenAI ChatGPT.
+- **[Connect Seller Central to Claude](https://ezseller.smatdesigns.com/learn/connect-amazon-seller-central-to-claude)** — Connecting Anthropic Claude to Amazon SP-API.
+- **[Connect Seller Central to Cursor](https://ezseller.smatdesigns.com/learn/connect-amazon-seller-central-to-cursor)** — Developer IDE integration for catalog and pricing operations.
+- **[AI for Amazon FBA Inventory](https://ezseller.smatdesigns.com/learn/ai-amazon-fba-inventory)** — Tracking reserved, inbound, and stranded units with verified evidence.
+- **[AI for Amazon Listing Suppression](https://ezseller.smatdesigns.com/learn/ai-amazon-listing-issues)** — Diagnosing suppression codes, attribute defects, and search restrictions.
+- **[AI for Amazon Financial Events & Reimbursements](https://ezseller.smatdesigns.com/learn/ai-amazon-financial-events)** — Reconciling fees, refunds, and lost-inventory reimbursements.
+- **[FBA Reserved & Stranded Inventory Guide](https://ezseller.smatdesigns.com/learn/amazon-fba-reserved-stranded-inventory)** — Resolving stock discrepancies without blind zero-fills.
+- **[Amazon Suppressed Listings Report Analysis](https://ezseller.smatdesigns.com/learn/amazon-suppressed-listings-report)** — Automated ingestion and fix generation.
+- **[Amazon FBA Reimbursement Audit Workflow](https://ezseller.smatdesigns.com/learn/amazon-fba-reimbursement-audit)** — Auditing claimable events before submitting cases.
+- **[Full AI Guide Index](https://ezseller.smatdesigns.com/learn)** — Complete library of Amazon seller AI tutorials.
 
-**Do not publish private or security information.** Use [private product support](https://ezseller.smatdesigns.com/support) when the details cannot be shared publicly. Read [Security](SECURITY.md) before reporting a vulnerability.
+---
 
-## Use an AI agent to get help
+## Find an Answer First
 
-An agent with a separately authorized GitHub connection can search issues, read the full discussion, prepare a safe report and, when requested, create an issue or post a reply. The maintained [GitHub MCP Server](https://github.com/github/github-mcp-server) exposes these issue operations. The product MCP does **not** automatically give the agent GitHub permissions.
+Search the [open and closed issues](https://github.com/jabbertones-cloud/ezseller-support/issues?q=is%3Aissue) for your symptom or MCP tool name before opening a new ticket:
 
-Ask your agent: **"Check existing EzSeller support issues for this error and tell me whether there is a fix or workaround."**
+- [Troubleshooting Guide](docs/troubleshooting.md)
+- [Known Issues & Workarounds](docs/known-issues.md)
+- [Problem Ontology Reference](knowledge/problem-ontology.md)
 
-To file a report, ask: **"Prepare a public bug report with safe details. Search for duplicates, then file it using my GitHub connection."**
+## Report a Problem
 
-If GitHub is not connected, your agent can prepare a report and give you the [new issue form](https://github.com/jabbertones-cloud/ezseller-support/issues/new/choose). It must not claim a ticket was created.
+1. Click **[Report a bug](https://github.com/jabbertones-cloud/ezseller-support/issues/new/choose)** and select the matching issue form.
+2. Specify the affected EzSeller tool, marketplace, expected vs. observed behavior, and minimal reproduction steps.
+3. **Never include secrets:** Do not post API credentials, seller tokens, customer records, order PII, or raw provider bodies.
+4. Keep the issue link for tracking or sharing with your AI coding agent.
 
-Read [Agent workflow](AGENTS.md) and [GitHub issue operations](AGENT-GITHUB-ISSUES.md).
+> **Private or Sensitive Inquiries:** For private account or billing questions that cannot be shared publicly, use the **[EzSeller Private Support Portal](https://ezseller.smatdesigns.com/support)**. Follow [Security Policy](SECURITY.md) for vulnerability reports.
 
-## What happens next
+## Use an AI Agent to Get Help
 
-You can track an issue and respond in its GitHub thread. A maintainer may ask for a minimal reproduction, share a workaround or request a new test. There is no guaranteed response time. A report is not fixed until the affected behavior has been independently checked.
+AI agents equipped with GitHub MCP capabilities can search, inspect, and file issues directly:
 
-EzSeller support issues are about the EzSeller product, not Amazon Seller Support cases. Public reports cannot verify private Amazon account state. Use authenticated diagnostics for account-specific evidence.
+- **Search:** *"Search existing EzSeller support issues for 'amazon_explain_inventory rate limit' and summarize any fix."*
+- **Prepare Draft:** *"Draft a reproducible, sanitized public bug report for this tool error and give me the pre-filled link."*
+- **File with User Consent:** *"Create the bug report in jabbertones-cloud/ezseller-support using my GitHub connection."*
 
-## Contribute
-
-Corrections and reusable troubleshooting notes are welcome. See [Contributing](CONTRIBUTING.md) and [Support policy](SUPPORT.md).
+Review [Agent Workflow](AGENTS.md) and [GitHub Issue Operations](AGENT-GITHUB-ISSUES.md) for full specifications.
