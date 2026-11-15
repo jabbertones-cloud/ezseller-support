@@ -9,5 +9,7 @@
   },
   "homepage": "https://ezseller.smatdesigns.com/",
   "repository": "https://github.com/jabbertones-cloud/ezseller-support",
-  "license": "MIT"
+  "license": "MIT",
+  "icon": "assets/ezseller-icon.png",
+  "privacyPolicyUrl": "https://ezseller.smatdesigns.com/privacy"
 }
