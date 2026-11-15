@@ -1,13 +1,13 @@
 # Anthropic directory submission: EzSeller
 
-Prepared 2026-11-14. **Status: package prepared, submission not sent, real Claude host certification incomplete.**
+Prepared 2026-11-14, updated 2026-11-15. **Status: public distribution package merged and exact-main CLI validated; Anthropic portal submission not sent and real Claude host certification incomplete.**
 
 **Authoritative engineering repo:** private `jabbertones-cloud/ezamazon`; **public plugin distribution:** `jabbertones-cloud/ezseller-support` at `claude/ezseller`. This public repo contains only connector metadata, an operator onboarding skill, a static icon, and public support material. Keep the original EzSeller source and CommerceOS private.
 
 ## Route and immutable product identity
 
 - Connector submission type: **MCP connector** for `https://ezseller.smatdesigns.com/mcp`.
-- Plugin submission type: **Plugin bundle** from GitHub repo `jabbertones-cloud/ezseller-support`, branch `main` **after this PR merges**, path `claude/ezseller`.
+- Plugin submission type: **Plugin bundle** from GitHub repo `jabbertones-cloud/ezseller-support`, branch `main` (PR #4 merged 2026-11-15), path `claude/ezseller`.
 - Permanent listing name/slug: `ezseller`. Publisher: **SMAT Designs**. The plugin version is distinct from the OpenAI-published EzSeller app version.
 - Submit both from the same long-term Claude organization to enable pairing, connector usage reporting, and one shared MCP backend. Do not expose the private source repository or attach credentials to any files.
 
@@ -50,9 +50,10 @@ EzSeller helps Amazon sellers investigate real operating questions with Claude. 
 
 - [x] Canonical HTTPS MCP identity and OAuth discovery have public HTTP success with authentication required at MCP.
 - [x] Public documentation, privacy, terms, and support URLs responded HTTP 200 on 2026-11-14.
-- [x] Public, small source repository and Claude-native plugin folder prepared for review on a feature branch.
-- [ ] Merge exact reviewed branch, independently validate on the actual merged main, confirm no unintended GitHub Action automation.
-- [x] Official Claude Code CLI 2.1.325 `claude plugin validate ./claude/ezseller` passed on an M1 ephemeral clone after adding a native PNG icon and explicit privacy-policy URL. Re-run on the exact final HEAD before merge.
+- [x] Public Claude-native distribution package merged from PR #4. Exact-main SHA: `fbc2b63a9d35d62e81e5b6dcd47c451bc9ae790d`; packaging-only changes, no production/backend or GitHub Actions workflow.
+- [x] Official Claude Code CLI 2.1.325 strict plugin validation passed on a fresh M1 clone of that exact main SHA with no directory warnings or errors. Icon independently measured at 512 x 512 PNG. CLI validation is not Anthropic's portal validation or a safety scan.
+- [x] Remote MCP unauthenticated security checks: protected-resource and authorization-server discovery expose canonical resource/issuer, `initialize` and `tools/list` return HTTP 401 with a bearer challenge, and an untrusted Origin returns HTTP 403. No token was supplied.
+- [x] RemoteDesk MCP Test Lab protocol compatibility: `claude-code` and `claude-desktop` are compatible at the configuration/transport level; both remain **partial**, with `realHostCertified=false`, no authenticated `tools/list` and no seller read.
 - [ ] Anthropic submission portal **Validate** for the exact reviewed branch/commit and scan.
 - [ ] Test the **real Claude host**: clean-account connector install, OAuth code+PKCE, discovery, initial tools/list, account connection, a real authorized read, cross-tenant isolation, token refresh, disconnect/reconnect, and no scope escalation. Save release SHA and sanitized receipts in private EzSeller engineering repo; never paste tokens or seller PII into this public repo.
 - [ ] Run and record MCP Inspector/Claude checks for **every exposed tool** under its applicable plan/authorization; verify `title`, `readOnlyHint`, `destructiveHint`, side-effect classification, safe failures, and quota-controlled calls. A skip is not a pass.
@@ -60,6 +61,17 @@ EzSeller helps Amazon sellers investigate real operating questions with Claude. 
 - [ ] Arrange reviewer test account and monitored security/support contact through the approved private channel; do not commit credentials.
 - [ ] Obtain owner review of exact data retention, all required Anthropic attestations, icon quality, category labels, and permanent slug.
 - [ ] Owner/authorized Claude organization signs into https://claude.ai/directory/manage, submits the **remote MCP connector first** and then **Plugin bundle** with repo+path from merged main, links same server, and records portal receipt and any review feedback.
+
+
+## Verification receipt, 2026-11-15
+
+- **Exact main package:** `fbc2b63a9d35d62e81e5b6dcd47c451bc9ae790d` (public support repository). Anthropic Claude Code 2.1.325 `plugin validate --strict` returned `Validation passed` and `These checks found nothing to report`. Optional informational advice about a separate Claude Code marketplace install command is not an error, and no uncreated marketplace is advertised.
+- **Auth metadata:** `https://ezseller.smatdesigns.com/.well-known/oauth-protected-resource/mcp` and `/.well-known/oauth-authorization-server` return HTTP 200 with resource `https://ezseller.smatdesigns.com/mcp`, issuer `https://ezseller.smatdesigns.com`, authorization-code and refresh-token grants, and PKCE S256.
+- **Negative controls:** unauthenticated MCP `initialize` and `tools/list` are 401 with bearer challenge, hostile `Origin: https://hostile.invalid` returns 403. These observations do not test an authenticated tenant or account.
+- **MCP Test Lab:** `transport=http` on the public endpoint returns `auth_required`, `toolCount=0`, `tokenSourcePresent=false`; host models `claude-code` and `claude-desktop` are `protocolCompatible=true` but `realHostCertified=false`. Never count this as a successful native Claude OAuth session.
+- **Vendor certification:** `jabbertones-cloud/ezamazon/docs/release-evidence/clients/claude/status.json` still declares `protocol-tested`, `evidence: []`. Do not alter that record absent a real authenticated Claude evidence bundle.
+- **Provider boundary:** main EzSeller README still documents its individual Amazon customer app as under review with capped beta authorization; do not promote limited beta to general Amazon public-app approval.
+- **Submission:** Anthropic's portal requires a paid Claude organization with submission permissions, a live Claude tool-use test, exact listing/data-handling disclosures, and the separate policy acknowledgments: seven for the MCP connector and four for the plugin bundle. Reviewer test access is requested separately if Verified review is triggered; do not disclose credentials in the form or repository. First submitted organization owns the plugin repository-folder listing.
 
 ## Suggested reviewer scenarios (use only real seeded test data)
 
