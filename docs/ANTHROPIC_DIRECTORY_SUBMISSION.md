@@ -38,7 +38,7 @@ EzSeller helps Amazon sellers investigate real operating questions with Claude. 
 - Issue reports: https://github.com/jabbertones-cloud/ezseller-support/issues
 - Privacy: https://ezseller.smatdesigns.com/privacy
 - Terms: https://ezseller.smatdesigns.com/terms
-- Brand icon: `claude/ezseller/assets/ezseller-icon.svg`
+- Brand icon: `claude/ezseller/assets/ezseller-icon.png` (512 x 512 PNG, verified in Anthropic native CLI)
 - Business: SMAT Designs, https://smatdesigns.com/
 - Contact email: supply and verify the actual monitored organizational mailbox in the authenticated portal. Never invent one.
 
@@ -52,7 +52,8 @@ EzSeller helps Amazon sellers investigate real operating questions with Claude. 
 - [x] Public documentation, privacy, terms, and support URLs responded HTTP 200 on 2026-11-14.
 - [x] Public, small source repository and Claude-native plugin folder prepared for review on a feature branch.
 - [ ] Merge exact reviewed branch, independently validate on the actual merged main, confirm no unintended GitHub Action automation.
-- [ ] Run `claude plugin validate ./claude/ezseller` using a supported installed Claude Code CLI and Anthropic portal **Validate** for the exact branch/commit.
+- [x] Official Claude Code CLI 2.1.325 `claude plugin validate ./claude/ezseller` passed on an M1 ephemeral clone after adding a native PNG icon and explicit privacy-policy URL. Re-run on the exact final HEAD before merge.
+- [ ] Anthropic submission portal **Validate** for the exact reviewed branch/commit and scan.
 - [ ] Test the **real Claude host**: clean-account connector install, OAuth code+PKCE, discovery, initial tools/list, account connection, a real authorized read, cross-tenant isolation, token refresh, disconnect/reconnect, and no scope escalation. Save release SHA and sanitized receipts in private EzSeller engineering repo; never paste tokens or seller PII into this public repo.
 - [ ] Run and record MCP Inspector/Claude checks for **every exposed tool** under its applicable plan/authorization; verify `title`, `readOnlyHint`, `destructiveHint`, side-effect classification, safe failures, and quota-controlled calls. A skip is not a pass.
 - [ ] Confirm Amazon public-app approval or valid explicit reviewer/beta authorization and on-board a review tenant with non-sensitive sample data. Never reuse private CommerceOS authorizations, and never fabricate a general-public onboarding result.
