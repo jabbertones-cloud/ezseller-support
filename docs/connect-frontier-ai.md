@@ -50,16 +50,29 @@ claude mcp get ezseller
 
 Sign in to Claude Code, then authenticate its own EzSeller connector using the native MCP connection prompt. Claude web's session does **not** automatically authorize Claude Code. If the CLI says `Needs authentication`, it is configured but not yet able to read seller data.
 
-### Google Gemini CLI
+### Google Antigravity CLI (recommended Google host)
+
+Antigravity CLI supports Gemini models and remote MCP with its own OAuth authorization.
+
+```sh
+agy mcp list
+agy --model gemini-3.8-flash-low --mode plan
+```
+
+In the interactive Antigravity session, open `/mcp`, select **ezseller → Authenticate**, approve access on EzSeller's official consent page, and paste the one-time code shown on the callback page into **Antigravity's own** authorization-code prompt. Never paste the code into chat, support tickets, or repository files. Do not use unrestricted permission-bypass flags. Then verify a real `amazon_connection_status` read.
+
+An enabled EzSeller entry is not an authenticated session; completion of browser consent is not a verified model tool call. A previously connected Google account is not automatically an authorized EzSeller connector.
+
+### Legacy Google Gemini CLI
 
 ```sh
 gemini mcp add -s user -t http ezseller https://ezseller.smatdesigns.com/mcp
 gemini mcp list
 ```
 
-Only from a directory **you deliberately trust**, use the Gemini CLI's interactive `/mcp auth ezseller` flow where supported. Never disable Gemini's workspace-trust protection globally just to make MCP calls. If the CLI says `Disabled` in an untrusted folder, the service has not yet failed authentication; Gemini has correctly blocked loading its MCP servers. A later `Disconnected` result requires separate OAuth troubleshooting.
+In the November 2026 M2 test, Gemini CLI 0.45.2 returned **"This client is no longer supported for Gemini Code Assist for individuals"** during Google sign-in. This is a Google account/client restriction, not an EzSeller MCP failure. Prefer supported Antigravity when eligible instead of bypassing login policy or buying additional credentials.
 
-To minimize the client-visible catalog, configure a read-only allowlist in your Gemini MCP settings or use the client's supported tool controls. Server-side EzSeller still enforces access regardless of client list filtering.
+Where Gemini CLI login is supported, use `/mcp auth ezseller` only in a directory you deliberately trust. Do not disable workspace trust globally. `Disabled` in an untrusted folder and `Disconnected` awaiting OAuth are different states.
 
 ### Cursor
 
