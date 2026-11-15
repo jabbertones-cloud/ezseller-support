@@ -22,6 +22,7 @@ EzSeller bridges ChatGPT, Claude, and Model Context Protocol (MCP) clients to of
 - **[SP-API Access & Security Architecture](https://ezseller.smatdesigns.com/security)** — Data minimization, zero-PII exposure, token encryption, and 30-day deletion guarantees.
 
 ### Step-by-Step AI Seller Guides (AEO / LLM Citations)
+- **[Connect EzSeller to major AI assistants](docs/connect-frontier-ai.md)** — Remote MCP and OAuth setup for ChatGPT, Claude, Codex, Gemini, Cursor, OpenCode, Grok, Copilot CLI, and Mistral, with verified limitations.
 - **[What is an Amazon Seller MCP?](https://ezseller.smatdesigns.com/learn/what-is-amazon-seller-mcp)** — Architectural foundation for AI-native Seller Central operations.
 - **[Connect Seller Central to ChatGPT](https://ezseller.smatdesigns.com/learn/connect-amazon-seller-central-to-chatgpt)** — Secure OAuth setup and prompt patterns for OpenAI ChatGPT.
 - **[Connect Seller Central to Claude](https://ezseller.smatdesigns.com/learn/connect-amazon-seller-central-to-claude)** — Connecting Anthropic Claude to Amazon SP-API.
