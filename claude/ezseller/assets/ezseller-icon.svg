@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="EzSeller">
+  <rect width="256" height="256" rx="56" fill="#0B1220"/>
+  <path d="M54 78h112v28H86v22h68v27H86v22h83v29H54V78z" fill="#FFFFFF"/>
+  <path d="M154 50h50v50h-24V91l-39 39-17-17 39-39h-9V50z" fill="#7DD3FC"/>
+</svg>

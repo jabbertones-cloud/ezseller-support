@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ezseller": {
+      "type": "http",
+      "url": "https://ezseller.smatdesigns.com/mcp"
+    }
+  }
+}
