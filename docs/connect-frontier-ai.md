@@ -114,13 +114,33 @@ The November 15 OpenCode 1.18.33 test completed normal DCR browser consent and r
 
 ### GitHub Copilot CLI
 
-An eligible Copilot CLI account can load a native user MCP config, typically at `~/.copilot/mcp-config.json`. Merge the following server entry into the existing `mcpServers` object:
+Install the official Copilot CLI, sign in using `copilot login`, and configure EzSeller in `~/.copilot/mcp-config.json`.
+
+**OAuth compatibility:** Copilot CLI 1.0.112 initially failed EzSeller consent with `unauthorized_client` because its default metadata client was not accepted. The successful route used EzSeller's existing **public dynamic client registration (DCR)** with both loopback callback paths. Registration is a public protocol operation, not access to another seller or an Amazon authorization.
+
+Register your own public client in a terminal:
+
+```sh
+curl --fail-with-body -sS https://ezseller.smatdesigns.com/oauth/register \
+  -H 'Content-Type: application/json' \
+  --data '{
+    "client_name": "EzSeller for GitHub Copilot CLI",
+    "redirect_uris": ["http://127.0.0.1/", "http://127.0.0.1/callback"],
+    "token_endpoint_auth_method": "none",
+    "grant_types": ["authorization_code", "refresh_token"],
+    "response_types": ["code"]
+  }'
+```
+
+The response contains a `client_id` beginning with `eza_dcr_`. Insert the **complete public client ID** from that response into your Copilot user configuration. Merge the following server-entry fragment into the existing `mcpServers` object, preserving your other servers:
 
 ```json
 {
   "ezseller": {
     "type": "http",
     "url": "https://ezseller.smatdesigns.com/mcp",
+    "oauthClientId": "REPLACE_WITH_COMPLETE_REGISTERED_CLIENT_ID",
+    "oauthPublicClient": true,
     "tools": [
       "amazon_connection_status",
       "amazon_seller_profile",
@@ -131,7 +151,9 @@ An eligible Copilot CLI account can load a native user MCP config, typically at 
 }
 ```
 
-This is a **server-entry fragment**, not a complete replacement configuration. Install the supported official Copilot client, sign in, and complete any native OAuth and MCP tool approvals. A saved JSON file alone does not prove the Copilot host can authenticate or run tools. Microsoft/GitHub organization policies may restrict custom MCP connections.
+Do not add another `eza_dcr_` prefix or copy a client secret or bearer token. The client ID is public; the OAuth grant still requires your own EzSeller account consent.
+
+In Copilot's **interactive terminal**, run `/mcp auth ezseller`, approve only the intended read scopes through the official EzSeller consent page, and test one read-only `amazon_connection_status` call. This configuration and auth method passed a real Copilot 1.0.112 tool call on November 15, 2026; other versions and organizational policies can differ. Do not use blanket tool-approval modes.
 
 ## First safe question
 
