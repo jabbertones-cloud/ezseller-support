@@ -87,30 +87,41 @@ agent mcp login ezseller
 
 If `ezseller` is already configured, do not add a duplicate. Tool discovery is not proof of seller authorization, and a listed write-capable tool is **not** permission to perform a write. Confirm a real `amazon_connection_status` read.
 
-### OpenCode
+### OpenCode v2 (tested with 2.3.0)
 
-Add an entry in the native user config at `~/.config/opencode/opencode.json`, merging with existing settings:
+Use the official [OpenCode v2 CLI](https://opencode.ai/docs). v1.18.33 on our Mac could sign in but later returned `Unauthorized` during a seller-status tool call. The v2 configuration format is **different**: servers belong under `mcp.servers`, not directly under `mcp`.
+
+In an OpenCode project or user configuration, merge the following (choose a locally available callback port, and use the same port in both OAuth fields):
 
 ```json
 {
   "mcp": {
-    "ezseller": {
-      "type": "remote",
-      "url": "https://ezseller.smatdesigns.com/mcp",
-      "enabled": true
+    "servers": {
+      "ezseller": {
+        "type": "remote",
+        "url": "https://ezseller.smatdesigns.com/mcp",
+        "disabled": false,
+        "codemode": false,
+        "oauth": {
+          "redirect_uri": "http://127.0.0.1:24987/callback",
+          "callback_port": 24987
+        }
+      }
     }
   }
 }
 ```
 
-This is a fragment, **not** a replacement for other provider or MCP settings. Then run:
+These are **configuration fields**, not credentials. The explicit redirect makes OpenCode use the existing EzSeller **dynamic client registration (DCR)** flow instead of a default client-metadata identity. You still need to approve access in the native browser consent flow; do not store a bearer token or client secret in this file.
 
 ```sh
 opencode mcp auth ezseller
 opencode mcp list
 ```
 
-The November 15 OpenCode 1.18.33 test completed normal DCR browser consent and reported `ezseller connected`. Full model tool use and seller-scope certification remain independent checks.
+Wait until the same project's `mcp list` reports `ezseller connected` before making your first model request. For a one-shot `opencode run`, **use the same project directory that was authenticated and warmed**. OpenCode has a documented cold-start race in which MCP tools can be absent from the first model request even though the server later connects. See [OpenCode issue #60893](https://github.com/anomalyco/opencode/issues/60893).
+
+The November 15 M2 test on OpenCode v2.3.0 used this configuration and a persistent seller workspace. Multiple actual read-only `amazon_connection_status` calls passed, including a fresh CLI invocation. The legacy v1 setup remains separate; do not migrate its OAuth token by copying or pasting credentials.
 
 ### GitHub Copilot CLI
 
