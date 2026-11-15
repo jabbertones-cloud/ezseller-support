@@ -1,0 +1,13 @@
+{
+  "name": "ezseller",
+  "displayName": "EzSeller",
+  "version": "0.1.0",
+  "description": "Investigate authorized Amazon Seller Central listing issues, FBA inventory, selling fees, financial events, and reimbursement evidence with EzSeller.",
+  "author": {
+    "name": "SMAT Designs",
+    "url": "https://smatdesigns.com/"
+  },
+  "homepage": "https://ezseller.smatdesigns.com/",
+  "repository": "https://github.com/jabbertones-cloud/ezseller-support",
+  "license": "MIT"
+}
