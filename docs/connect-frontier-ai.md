@@ -123,6 +123,27 @@ Wait until the same project's `mcp list` reports `ezseller connected` before mak
 
 The November 15 M2 test on OpenCode v2.3.0 used this configuration and a persistent seller workspace. Multiple actual read-only `amazon_connection_status` calls passed, including a fresh CLI invocation. The legacy v1 setup remains separate; do not migrate its OAuth token by copying or pasting credentials.
 
+#### Switch AI models without reconnecting Amazon
+
+Your EzSeller OAuth authorization belongs to the **MCP client connection**, not a particular language model. When an OpenCode provider offers a model and the MCP server is connected in the same project, you can try one read-only seller status request from that model.
+
+These four exact model IDs completed real `amazon_connection_status` tool invocations on a tested M2 OpenCode v2.3.0 configuration on November 15, 2026:
+
+| Model ID | Observed outcome |
+| --- | --- |
+| `opencode/glm-5.3-flash-free` | Read-only EzSeller tool passed |
+| `opencode/deepseek-v4.1-flash-free` | Read-only EzSeller tool passed |
+| `opencode/minimax-m3.1-flash-free` | Read-only EzSeller tool passed |
+| `opencode/mimo-v2.6-flash-free` | Read-only EzSeller tool passed |
+
+For example, **from the already-authorized, warmed OpenCode project**:
+
+```sh
+opencode run --model opencode/deepseek-v4.1-flash-free 'Check my EzSeller connection using only the read-only amazon_connection_status tool.'
+```
+
+Free model catalogs, quotas, availability, and tool-selection behavior can change. This is a **tested model-to-MCP read**, not proof of a new live Amazon SP-API round trip or permission for automated listing changes. On systems where the model cannot see the tool in a new directory, verify the project MCP status before retrying rather than reusing credentials or bypassing approvals.
+
 ### GitHub Copilot CLI
 
 Install the official Copilot CLI, sign in using `copilot login`, and configure EzSeller in `~/.copilot/mcp-config.json`.
