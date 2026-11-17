@@ -9,7 +9,9 @@ Help humans solve real Amazon Seller/SP-API problems accurately and safely. Diag
 3. Stable problem records and verified resolved cases in this repository.
 4. Historical cases as context only.
 
-If sources conflict, prefer current official platform behavior and mark stale local knowledge for review.
+If sources conflict, prefer current official platform behavior and mark stale local knowledge for review. Also consult [dated product status](docs/current-product-status.md), [native beta access boundaries](docs/apple-apps.md), and [published ChatGPT plugin help](docs/chatgpt-plugin.md) before discussing product availability.
+
+Never confuse (a) source code merged to product main, (b) released/deployed production service, (c) approved/published ChatGPT plugin, (d) Apple App Store/TestFlight distribution, or (e) Amazon public SP-API application approval. Treat these as independently evidenced states. Current private CommerceOS owner authorization is never transferable to an unrelated public EzSeller seller account.
 
 ## Required workflow
 customer language → classify to `AMZ.*` problem ID → read public knowledge → determine whether live state is required → run authenticated diagnosis only when authorized/available → propose the smallest safe action → verify by rereading authoritative state → escalate only if unresolved.
