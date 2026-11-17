@@ -2,7 +2,7 @@
 
 Get authoritative guidance, troubleshooting, and agent assistance for **[EzSeller](https://ezseller.smatdesigns.com/)** — AI-powered Amazon Seller Central automation for listings, FBA inventory, sales analytics, and reimbursement audits.
 
-**[Search issues](https://github.com/jabbertones-cloud/ezseller-support/issues)** · **[Report a bug](https://github.com/jabbertones-cloud/ezseller-support/issues/new/choose)** · **[Read agent instructions](AGENT-GITHUB-ISSUES.md)** · **[EzSeller Home](https://ezseller.smatdesigns.com/)**
+**[Current release status](docs/release-status-2026-11-17.md)** · **[Search issues](https://github.com/jabbertones-cloud/ezseller-support/issues)** · **[Report a bug](https://github.com/jabbertones-cloud/ezseller-support/issues/new/choose)** · **[Read agent instructions](AGENT-GITHUB-ISSUES.md)** · **[EzSeller Home](https://ezseller.smatdesigns.com/)**
 
 ---
 
@@ -16,7 +16,7 @@ EzSeller bridges ChatGPT, Claude, and Model Context Protocol (MCP) clients to of
 - **[Free Amazon Listing Problem Checker](https://ezseller.smatdesigns.com/check)** — Diagnostic checker for suppressed, inactive, and stranded listings.
 - **[Verified Amazon Seller Case Studies](https://ezseller.smatdesigns.com/cases)** — Evidence-backed case resolutions across FBA inventory, catalog, and finances.
 - **[Supported Seller Workflows](https://ezseller.smatdesigns.com/workflows)** — Guarded investigation, approval, action, and verification sequences.
-- **[Pricing & Plans](https://ezseller.smatdesigns.com/pricing)** — Studio, Desk, and Agency tiers for individual brand owners and multi-account operators.
+- **[Pricing & Plans](https://ezseller.smatdesigns.com/pricing)** — Free, Studio, Desk and Floor plans; check the live pricing page and [dated status](docs/release-status-2026-11-17.md) for seller/seat limits.
 - **[Amazon Agency Operations Software](https://ezseller.smatdesigns.com/for-agencies)** — Scaled operator features, client isolation, and audit trails.
 - **[Full-Service Amazon Account Management](https://ezseller.smatdesigns.com/amazon-account-management)** — Hands-on management by SMAT Designs.
 - **[SP-API Access & Security Architecture](https://ezseller.smatdesigns.com/security)** — Data minimization, zero-PII exposure, token encryption, and 30-day deletion guarantees.
@@ -36,6 +36,10 @@ EzSeller bridges ChatGPT, Claude, and Model Context Protocol (MCP) clients to of
 - **[Full AI Guide Index](https://ezseller.smatdesigns.com/learn)** — Complete library of Amazon seller AI tutorials.
 
 ---
+
+## Current status and platform support
+
+The published ChatGPT plugin is **EzSeller v0.2.12** ([direct listing](https://chatgpt.com/plugins/plugin_asdk_app_6ad8dec86efc8191a394326b42cdffbd)). Native **iOS and macOS** apps remain in beta development, with translation and release checks underway. See [the dated status page](docs/release-status-2026-11-17.md) before claiming a feature, localization, app release or pending PR is live.
 
 ## Find an Answer First
 
