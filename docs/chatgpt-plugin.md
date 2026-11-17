@@ -14,6 +14,8 @@ EzSeller's OpenAI Platform plugin is **published, version 0.2.12**. This is dist
 4. Ask a read-only question such as **"Check my EzSeller Amazon connection status."**
 5. Check whether the assistant actually called `amazon_connection_status` and received a successful account-scoped response. An assistant saying "connected" without a tool result is not a verified seller read.
 
+**Review-state note (November 17):** [EzSeller source PR #1428](https://github.com/jabbertones-cloud/ezamazon/pull/1428) records an *unpublished update* to public MCP server instructions in OpenAI Platform and proposes restoring the previously approved wording. Until an updated package is separately reviewed and published, do not present pending source changes or the future plugin ZIP as the live v0.2.12 behavior.
+
 The published page may open through the direct link even when searching the ChatGPT plugin directory does not surface it. **Published** means the OpenAI Platform publication is accepted; it does **not** certify search ranking, rollout to all accounts, live Amazon authorization or every seller operation.
 
 ## Common issues
