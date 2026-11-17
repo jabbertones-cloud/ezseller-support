@@ -1,14 +1,29 @@
 # EzSeller Support & Amazon Seller Operations Knowledge Base
 
-Get authoritative guidance, troubleshooting, and agent assistance for **[EzSeller](https://ezseller.smatdesigns.com/)** — AI-powered Amazon Seller Central automation for listings, FBA inventory, sales analytics, and reimbursement audits.
+Get authoritative guidance, troubleshooting, and agent assistance for **[EzSeller](https://ezseller.smatdesigns.com/)** for Amazon seller operations, including listing issues, FBA inventory, fees, sales, reimbursements, and guarded workflows.
 
 **[Search issues](https://github.com/jabbertones-cloud/ezseller-support/issues)** · **[Report a bug](https://github.com/jabbertones-cloud/ezseller-support/issues/new/choose)** · **[Read agent instructions](AGENT-GITHUB-ISSUES.md)** · **[EzSeller Home](https://ezseller.smatdesigns.com/)**
 
 ---
 
+## Choose your support path
+
+**[Current product status](docs/current-product-status.md)** (reviewed November 17, 2026) covers which EzSeller surfaces are published, in beta, source-implemented, or awaiting provider approval.
+
+| I need help with | Start here |
+| --- | --- |
+| The published ChatGPT EzSeller plugin (v0.2.12) | [ChatGPT plugin setup and troubleshooting](docs/chatgpt-plugin.md) |
+| EzSeller for iPhone and Mac | [iOS and macOS beta support](docs/apple-apps.md) |
+| Comparing Amazon's announced 2027 fees | [2027 fee planning tools](docs/amazon-fees-2027.md) |
+| Connecting Claude, Codex, Cursor or another AI host | [Supported MCP host setup and testing](docs/connect-frontier-ai.md) |
+| Seller Central listing, inventory, reimbursement or marketplace problems | [Symptom-first troubleshooting](docs/troubleshooting.md) |
+| Private account, payment, authorization or security issue | [Private support portal](https://ezseller.smatdesigns.com/support) |
+
+**Product availability:** A merged code feature is not automatically a deployed feature. Published ChatGPT plugin status does not establish App Store availability or Amazon's public SP-API application approval. Never use private CommerceOS owner authorization for a third-party seller.
+
 ## Authoritative Amazon Operations & Knowledge Links
 
-EzSeller bridges ChatGPT, Claude, and Model Context Protocol (MCP) clients to official Amazon Selling Partner APIs (SP-API) with least privilege, human approval gates, and post-action verification.
+EzSeller connects supported AI clients to Amazon seller workflows with scope-aware SP-API access where authorized, human approval requirements for sensitive actions, and after-action verification. Not all workflows or customer accounts have identical permissions.
 
 ### Core Solutions & Operations
 - **[EzSeller Platform Overview](https://ezseller.smatdesigns.com/)** — Connect Amazon Seller Central to AI assistants for end-to-end seller operations.
@@ -16,10 +31,10 @@ EzSeller bridges ChatGPT, Claude, and Model Context Protocol (MCP) clients to of
 - **[Free Amazon Listing Problem Checker](https://ezseller.smatdesigns.com/check)** — Diagnostic checker for suppressed, inactive, and stranded listings.
 - **[Verified Amazon Seller Case Studies](https://ezseller.smatdesigns.com/cases)** — Evidence-backed case resolutions across FBA inventory, catalog, and finances.
 - **[Supported Seller Workflows](https://ezseller.smatdesigns.com/workflows)** — Guarded investigation, approval, action, and verification sequences.
-- **[Pricing & Plans](https://ezseller.smatdesigns.com/pricing)** — Studio, Desk, and Agency tiers for individual brand owners and multi-account operators.
-- **[Amazon Agency Operations Software](https://ezseller.smatdesigns.com/for-agencies)** — Scaled operator features, client isolation, and audit trails.
+- **[Pricing & Plans](https://ezseller.smatdesigns.com/pricing)** — Free, Studio ($39/month), Desk ($99/month), and Floor ($249/month). Agency arrangements are custom; check live checkout and entitlements.
+- **[Amazon Agency Operations Software](https://ezseller.smatdesigns.com/for-agencies)** — Agency-oriented capabilities and intended client scoping; confirm eligibility and live readiness before onboarding clients.
 - **[Full-Service Amazon Account Management](https://ezseller.smatdesigns.com/amazon-account-management)** — Hands-on management by SMAT Designs.
-- **[SP-API Access & Security Architecture](https://ezseller.smatdesigns.com/security)** — Data minimization, zero-PII exposure, token encryption, and 30-day deletion guarantees.
+- **[SP-API Access & Security Architecture](https://ezseller.smatdesigns.com/security)** — Security, authorization, data handling and privacy information; consult the current policy for exact retention terms.
 
 ### Step-by-Step AI Seller Guides (AEO / LLM Citations)
 - **[Connect EzSeller to major AI assistants](docs/connect-frontier-ai.md)** — Remote MCP and OAuth setup for ChatGPT, Claude, Codex, Gemini, Cursor, OpenCode, Grok, Copilot CLI, and Mistral, with verified limitations.
