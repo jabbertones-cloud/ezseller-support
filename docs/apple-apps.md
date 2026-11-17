@@ -8,7 +8,7 @@ EzSeller has native Apple applications for iPhone and Mac. They are **in beta / 
 ## Access and sign-in
 
 - **Current owner beta:** Native seller data access can be provided using the separately authorized *private owner* path. This is for approved internal testing, **not** a method for unrelated sellers to authorize Amazon accounts.
-- **General customer access:** EzSeller's own public Amazon SP-API/LWA authorization remains a separate Amazon approval gate. Until Amazon approval is verified, **general customer Amazon sign-in is not available through public EzSeller LWA**; the native apps must not present it as live.
+- **General customer access:** The November 17 first-party native auth-mode check described in [the source investigation](https://github.com/jabbertones-cloud/ezamazon/pull/1427) reported `publicAmazonAppApproved=true` while `bootstrapSessionAvailable=false`. Neither flag alone proves that an unrelated seller completed the public LWA connection on **both iOS and macOS**. External seller login, account isolation, authorization callback, and live seller-scoped tool access require end-to-end acceptance before public availability is claimed. Do not substitute private CommerceOS owner authorization.
 - **ChatGPT and web:** The [published ChatGPT plugin](chatgpt-plugin.md) and the [web support portal](https://ezseller.smatdesigns.com/support) are separate surfaces. Their publication does not establish general native customer eligibility.
 
 Do **not** ask customers to import Amazon client credentials, use a private application grant, paste a bootstrap code into a ticket, install an unpublished build from an untrusted site, or disable device security protections.
