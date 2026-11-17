@@ -17,11 +17,20 @@ EzSeller supports Amazon sellers with listings, inventory, finance, fees, reimbu
 | 2027 published Amazon fee calculators | Three read-only tools in EzSeller product main as of November 17 | The calculation model is not a live Amazon settlement or proof of deployment; see [fee guide](amazon-fees-2027.md) |
 | Multi-client / agency operations | Agency-scoped product code and plan configuration | General external agency onboarding and production isolation acceptance are not proven by source presence |
 
+## November 17 engineering changes awaiting separate release evidence
+
+- [Public MCP instructions and packaging PR #1428](https://github.com/jabbertones-cloud/ezamazon/pull/1428): the OpenAI Platform flagged a server-instructions update as not yet published. The public plugin remains **v0.2.12**; source changes and a future ZIP are not the approved live package.
+- [Native iOS/macOS 50-locale preparation PR #1432](https://github.com/jabbertones-cloud/ezamazon/pull/1432): locale catalogs and draft translation candidates are under review. **None of the 49 additional target locales passed the recorded strict release-readiness gate.** Do not claim complete translated apps or Store listings.
+- [Native owner-versus-paid account isolation PR #1426](https://github.com/jabbertones-cloud/ezamazon/pull/1426): pending work to keep internal first-party data separate from paying seller authorization. No customer or agency account may fall back to private owner data.
+- [Website direct-install-link PR #1430](https://github.com/jabbertones-cloud/ezamazon/pull/1430): an unmerged proposed website CTA; this repository can link directly to the published plugin independently of web deployment.
+
+The [native authorization evidence in PR #1427](https://github.com/jabbertones-cloud/ezamazon/pull/1427) reports `publicAmazonAppApproved=true` but `bootstrapSessionAvailable=false` on a first-party auth-mode check. These flags **do not prove end-to-end third-party LWA login on iPhone and Mac** or authorize using a private CommerceOS account path for customers. Require controlled external-customer login acceptance before marking native distribution ready.
+
 **Support status must stay distinct from deployment status.** A tool being defined on product `main` is not proof that a particular production MCP instance exposes it. A native app compiling is not proof it is available in the App Store. OpenAI plugin publication is not Amazon SP-API application approval.
 
 ## Current plan names
 
-The November 17 product plan catalog defines Free, Studio **$39/month**, Desk **$99/month** and Floor **$249/month**. Agency contracts for needs beyond standard self-service plans are arranged separately. Annual billing and entitlements differ. See the [canonical pricing page](https://ezseller.smatdesigns.com/pricing) for the currently offered checkout terms, seller-connection allowances and eligibility. A verified Amazon connection is required to use account-specific seller operations.
+The November 17 product plan catalog defines Free, Studio **$39/month**, Desk **$99/month** and Floor **$249/month**. Agency contracts for needs beyond standard self-service plans are arranged separately. The current public website also advertises a **14-day Studio trial after a verified Amazon connection**, no card, then Free. Annual billing and entitlements differ. See the [canonical pricing page](https://ezseller.smatdesigns.com/pricing) for the currently offered checkout terms, seller-connection allowances and eligibility. A verified Amazon connection is required to use account-specific seller operations.
 
 ## Find the right help
 
